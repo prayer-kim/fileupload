@@ -15,8 +15,6 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @Slf4j
 public class FileUploadController {
-	//public static final Logger log = LoggerFactory.getLogger(new Object(){}.getClass().getEnclosingClass().getName());
-	
 	public final FileUploadService fileUploadService;
 
     public FileUploadController(FileUploadService fileUploadService) {
@@ -26,8 +24,8 @@ public class FileUploadController {
     // 전체보기
     @GetMapping("/todos")
     public List<Todo> todos() {
-        //log.debug("methodName:" + new Object(){}.getClass().getEnclosingMethod().getName());
-        //log.debug("전체보기");
+        log.debug("methodName:" + new Object(){}.getClass().getEnclosingMethod().getName());
+        log.debug("전체보기");
 
         return fileUploadService.getAllTodos();
     }
